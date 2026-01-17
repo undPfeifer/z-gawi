@@ -100,9 +100,9 @@ if (idleTime > 1) { // 1 second idle
 if (idleTime > 0.9 && !randomTarget) {
   const idleRadiusX = 200
   const idleRadiusY = 150
-  const idleSpeed = 0.001
+  const idleSpeed = 0.0001
   const t = p.frameCount * idleSpeed
-  const idleX = target.x + p.cos(t) * idleRadiusX
+  const idleX = target.x + p.cos(t) * idleRadiusX 
   const idleY = target.y + p.sin(t * 1.2) * idleRadiusY
   toTarget.set(idleX - pos.x, idleY - pos.y)
 }

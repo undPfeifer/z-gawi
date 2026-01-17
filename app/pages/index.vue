@@ -1,10 +1,10 @@
-<script setup lang="ts">
-import FiveWorlds from '~/components/FiveWorlds.vue';
-import SectionOneFlexGrow from '~/components/SectionOneFlexGrow.vue';
 
-</script>
 
 <template>
+
+<Stars />
+
+  <Loader />
 
   <ClientOnly>
   <P5Follower />

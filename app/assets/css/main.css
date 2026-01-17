@@ -35,6 +35,11 @@ html {
   font-size: 12px;
 }
 
+
+* {
+  color: white !important;
+}
+
 :root {
   --black: #000;
   --pink: #ffb0da;
@@ -50,6 +55,7 @@ body {
   font-family: Sofia Pro, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.2;
+  background-color: var(--pink);
 }
 
 .page__wrapper {
