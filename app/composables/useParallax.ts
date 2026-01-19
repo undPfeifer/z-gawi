@@ -7,17 +7,23 @@ gsap.registerPlugin(ScrollTrigger)
 export const useParallax = () => {
   onMounted(() => {
     const defaultMap: Record<string, number> = {
-      H1: 0.15,
-      H2: 0.22,
-      H3: 0.28,
-      P: 0.1,
-      IMG: 0.5,
+      H1: 0,
+      H2: 0.01,
+      H3: 0.03,
+      P: 0,
+      IMG: 0,
       SECTION: 0.35
     }
 
     const elements = document.querySelectorAll<HTMLElement>(
       "h1,h2,h3,p,img,section,[data-parallax]"
     )
+
+    const canvas = document.querySelector<HTMLElement>(
+      "canvas"
+    )
+
+  
 
     elements.forEach(el => {
       const attrSpeed = el.dataset.parallax

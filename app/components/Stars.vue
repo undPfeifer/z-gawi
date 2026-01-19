@@ -25,8 +25,8 @@ onMounted(async () => {
     const ufoFiles = ['ufo1.png','ufo2.png']
     const satelliteFiles = ['sat1.png','sat2.png']
 
-    const STAR_AMOUNT = 35
-    const MOON_AMOUNT = 1
+    const STAR_AMOUNT = Math.floor( window.innerWidth / 25)
+    const MOON_AMOUNT = Math.floor( window.innerWidth / 350)
     const UFO_AMOUNT = 1
     const SAT_AMOUNT = 1
 
@@ -127,7 +127,7 @@ onMounted(async () => {
 
     // ---------- Draw ----------
     sketch.draw = () => {
-      sketch.background('white')
+      sketch.background('#FCFCFB')
 
       function drawInteractive(obj, mouseInteractive=false){
         // Mouse interaction for stars and moons
@@ -135,7 +135,7 @@ onMounted(async () => {
           const dx = sketch.mouseX - obj.x
           const dy = sketch.mouseY - obj.y
           const distToMouse = sketch.sqrt(dx*dx + dy*dy)
-          const radius = 150
+          const radius = 350
           if(distToMouse < radius){
             const angle = sketch.atan2(dy, dx)
             const moveAmount = sketch.map(radius - distToMouse, 0, radius, 0, 20)

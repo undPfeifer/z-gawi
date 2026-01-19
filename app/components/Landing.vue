@@ -2,7 +2,9 @@
     <section class="start__section">
         <div class="start__text-container">
             <h1>It all <br> makes <br>zense.</h1>
-            <p>Leaders and Managers — for example strategy acitivation</p>
+            <p>We help leaders, changemakers and other storytellers (re)frame complexity.
+
+</p>
         </div>
     </section>
 </template>
@@ -34,7 +36,7 @@
   display: flex;
 }
 
-.start-text_p {
+.start__text-container > p {
   max-width: 20ch;
 }
 </style>
