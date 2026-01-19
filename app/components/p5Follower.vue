@@ -26,7 +26,7 @@ onMounted(async () => {
 
     let pos, vel, acc, target
     let facing = 1
-    let idleTime = 0
+    let idleTime = 10000000
 
     
     let randomTarget = null
@@ -58,7 +58,7 @@ onMounted(async () => {
         p.mouseY <= p.height
       ) {
         target.set(p.mouseX, p.mouseY)
-        idleTime = 0
+        idleTime = 100000
       }
     }
 
@@ -70,7 +70,7 @@ p.draw = () => {
   const distance = toTarget.mag()
 
   // Idle detection
-  if (distance < 4) idleTime += 0.01
+  if (distance < 4) idleTime += 1
   else idleTime = 0
 
 // Autonomous wandering when idle
@@ -110,7 +110,7 @@ if (idleTime > 0.9 && !randomTarget) {
 
   // Acceleration toward target — nonlinear for more speed
   const minAccel = 0.05
-  const maxAccel = 1.0
+  const maxAccel = 0.6
   const accelStrength = p.constrain(Math.pow(distance, 1.2) * 0.0005, minAccel, maxAccel)
   acc = toTarget.copy().normalize().mult(accelStrength)
 
@@ -181,6 +181,7 @@ onBeforeUnmount(() => {
   left: 0;
   pointer-events: none;
   z-index: 1000;
+
 }
 
 img{

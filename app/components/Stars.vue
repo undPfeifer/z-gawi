@@ -25,8 +25,8 @@ onMounted(async () => {
     const ufoFiles = ['ufo1.png','ufo2.png']
     const satelliteFiles = ['sat1.png','sat2.png']
 
-    const STAR_AMOUNT = 25
-    const MOON_AMOUNT = 3
+    const STAR_AMOUNT = 35
+    const MOON_AMOUNT = 1
     const UFO_AMOUNT = 1
     const SAT_AMOUNT = 1
 
@@ -104,7 +104,7 @@ onMounted(async () => {
       cnv.parent(canvasContainer.value)
       sketch.angleMode(sketch.DEGREES)
 
-      const pinkColor = sketch.color('#000000') // declare pink inside setup
+      const pinkColor = sketch.color('#FDAFC4') // declare pink inside setup
 
       // Load all images
       loadedStars = await loadImages(starPath, starFiles)
@@ -127,7 +127,7 @@ onMounted(async () => {
 
     // ---------- Draw ----------
     sketch.draw = () => {
-      sketch.background('#FFB0DA')
+      sketch.background('white')
 
       function drawInteractive(obj, mouseInteractive=false){
         // Mouse interaction for stars and moons
@@ -215,5 +215,6 @@ onBeforeUnmount(() => {
   height: 100vh;
   z-index: -1;
   pointer-events: none;
+  opacity: 1
 }
 </style>

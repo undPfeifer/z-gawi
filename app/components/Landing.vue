@@ -1,7 +1,7 @@
 <template>
     <section class="start__section">
         <div class="start__text-container">
-            <h1>It all makes zense.</h1>
+            <h1>It all <br> makes <br>zense.</h1>
             <p>Leaders and Managers — for example strategy acitivation</p>
         </div>
     </section>

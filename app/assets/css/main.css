@@ -37,7 +37,8 @@ html {
 
 
 * {
-  color: white !important;
+  color: black !important;
+
 }
 
 :root {
@@ -55,7 +56,7 @@ body {
   font-family: Sofia Pro, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.2;
-  background-color: var(--pink);
+  background-color: white;
 }
 
 .page__wrapper {
