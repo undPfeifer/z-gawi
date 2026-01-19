@@ -176,7 +176,7 @@ onBeforeUnmount(() => {
   height: 100vh;
   overflow: hidden;
 
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   pointer-events: none;
